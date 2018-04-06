@@ -1,13 +1,16 @@
 package com.example.catchat.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "Cat")
 public class CatResource {
+
+    @Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String URL;
 
     public Long getId() {
         return id;
@@ -33,12 +36,7 @@ public class CatResource {
         this.URL = URL;
     }
 
-    @Id
-    @GeneratedValue
-    private Long id;
 
-    private String name;
-    private String URL;
 
 
 }

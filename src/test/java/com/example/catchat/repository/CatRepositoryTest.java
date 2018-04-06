@@ -30,6 +30,6 @@ public class CatRepositoryTest {
     @Test
     public void testFindAllCats() {
         List<CatResource> cats = catRepository.findAll();
-        assertThat(cats.size(), is(1));
+        assertThat(cats.size(), is(3));
     }
 }
